@@ -24,7 +24,7 @@
           <li><a href="index.html">Presentation</a></li>
           <li class="selected"><a href="project.html">The Project</a></li>
           <li><a href="analysis.html">Analysis</a></li>
-          <li><a href="references.html">Refereces</a></li>
+          <li><a href="references.html">Refereces </a></li>
         </ul>
       </div>
     </div>
@@ -42,17 +42,17 @@
 		and at the same time identify those features or attributes that make them different from each other, to be able to approach each customer in a more personalized way. </br></br>
 		To achieve this goal, we use Predictive Analytics (Kotu and Deshpande 2015), which is a set of techniques that can take some available historical data and predict with
 		certain accuracy the future behavior of an analyzed agent. </br></br> Our proposed solution is constituted by two phases, first we create a classifier for the resulting data set 
-		from the merging of the Inprova dataset and the HousingNet dataset, that will distinguish between ìBuyersî and ìNot buyersî and as a second phase we implement some 
+		from the merging of the Inprova dataset and the HousingNet dataset, that will distinguish between ‚ÄúBuyers‚Äù and ‚ÄúNot buyers‚Äù and as a second phase we implement some 
 		Clustering algorithm to be able to identify those groups that share some certain degree of similarity (Raschka 2015).</br></br> For the classifier, we will use data provided by 
-		Inprova from their actual clientís database and based on that information we will generate a ìpositiveî part of the training/testing dataset, we are considering all 
-		the clients contained in the Inprovaís data set as Positive because they are current or past customers. The second step is to merge the datasets (Inprovaís & HousingNet),
+		Inprova from their actual client‚Äôs database and based on that information we will generate a ‚Äúpositive‚Äù part of the training/testing dataset, we are considering all 
+		the clients contained in the Inprova‚Äôs data set as Positive because they are current or past customers. The second step is to merge the datasets (Inprova‚Äôs & HousingNet),
 		and we are doing that by calculating the Levenshtein Distance (Gilleland s.f.) and from the result, we merge the datasets. The negative part of the dataset is composed of
-		those records from the HousingNet dataset that were not matched with any of the Inprovaís current clients. With that information, we generate a Target Variable which takes 
+		those records from the HousingNet dataset that were not matched with any of the Inprova‚Äôs current clients. With that information, we generate a Target Variable which takes 
 		Boolean values, 1 for those who are clients, and 0 for those who are not. </br></br>During this project, we aimed to identify which of the analyzed classification algorithms is 
 		the one that is the most suitable for the available data, because each classifier has its own strengths and requirements depending on the data available during the 
 		learning stage. The Classifying algorithms that are analyzed for the classifier are: </br>1. Multilayer Perceptron (MLP) </br>2. K-Nearest Neighbour (KNN) </br>3. Logistic regression </br>4. 
 		Support Vector Machines (SVM) </br></br>For the second section of the solution, we executed a Clustering Analysis based on the resulting dataset of those registers classified as 
-		ìBuyersî, which is helping us to find any hidden structure in the data of our potential clients and based in this we can separate them in groups that have a certain 
+		‚ÄúBuyers‚Äù, which is helping us to find any hidden structure in the data of our potential clients and based in this we can separate them in groups that have a certain 
 		similarity. The algorithms that are included in this model to assess their suitability are the following: </br>1. The K-means algorithm </br>2. Hierarchical Clustering </p>
       
       </div>
