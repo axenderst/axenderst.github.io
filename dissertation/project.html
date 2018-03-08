@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Propensity to Purchase in Procurement</title>
+
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html"><span class="logo_colour">Propensity to Purchase in Procurement</span></a></h1>
+          <h2>A project for  module COMP702</h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href="index.html">Presentation</a></li>
+          <li class="selected"><a href="project.html">The Project</a></li>
+          <li><a href="analysis.html">Analysis</a></li>
+          <li><a href="references.html">Refereces</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      
+      <div id="content">
+        <!-- insert the page content here -->
+        <h1>What's the project about</h1>
+        <p> The Project Propensity to Purchase in Procurement with data provided by Inprova (Department of Computer Science 2017) is conducted as an MSc dissertation project 
+		from the module COMP702 (Martin 2017), and it will be developed by the student Victor Ortiz, who is to be supervised by Dr. David Hamilton as Primary supervisor and 
+		Dr. Leszek Gasieniec as Secondary supervisor, and it emerges as part of the collaboration between the University of Liverpool and Inprova Group. </br></br>
+		The main objective of 
+		this project is to create a Propensity to Purchase Model (Miller 2012) based on data provided by Inprova Group (from their customer's database) and also data obtained 
+		from the Housing Net website (HousingNet.co.uk 2017). The model predicts the propensity to buy of a specific potential client, this allows to identify potential customers
+		and at the same time identify those features or attributes that make them different from each other, to be able to approach each customer in a more personalized way. </br></br>
+		To achieve this goal, we use Predictive Analytics (Kotu and Deshpande 2015), which is a set of techniques that can take some available historical data and predict with
+		certain accuracy the future behavior of an analyzed agent. </br></br> Our proposed solution is constituted by two phases, first we create a classifier for the resulting data set 
+		from the merging of the Inprova dataset and the HousingNet dataset, that will distinguish between “Buyers” and “Not buyers” and as a second phase we implement some 
+		Clustering algorithm to be able to identify those groups that share some certain degree of similarity (Raschka 2015).</br></br> For the classifier, we will use data provided by 
+		Inprova from their actual client’s database and based on that information we will generate a “positive” part of the training/testing dataset, we are considering all 
+		the clients contained in the Inprova’s data set as Positive because they are current or past customers. The second step is to merge the datasets (Inprova’s & HousingNet),
+		and we are doing that by calculating the Levenshtein Distance (Gilleland s.f.) and from the result, we merge the datasets. The negative part of the dataset is composed of
+		those records from the HousingNet dataset that were not matched with any of the Inprova’s current clients. With that information, we generate a Target Variable which takes 
+		Boolean values, 1 for those who are clients, and 0 for those who are not. </br></br>During this project, we aimed to identify which of the analyzed classification algorithms is 
+		the one that is the most suitable for the available data, because each classifier has its own strengths and requirements depending on the data available during the 
+		learning stage. The Classifying algorithms that are analyzed for the classifier are: </br>1. Multilayer Perceptron (MLP) </br>2. K-Nearest Neighbour (KNN) </br>3. Logistic regression </br>4. 
+		Support Vector Machines (SVM) </br></br>For the second section of the solution, we executed a Clustering Analysis based on the resulting dataset of those registers classified as 
+		“Buyers”, which is helping us to find any hidden structure in the data of our potential clients and based in this we can separate them in groups that have a certain 
+		similarity. The algorithms that are included in this model to assess their suitability are the following: </br>1. The K-means algorithm </br>2. Hierarchical Clustering </p>
+      
+      </div>
+    </div>
+    <div id="footer">
+      Created by: Victor Ortiz-Santiago</br>
+	  University of Liverpool
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Propensity to Purchase in Procurement</title>
+
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html"><span class="logo_colour">Propensity to Purchase in Procurement</span></a></h1>
+          <h2>A project for  module COMP702</h2>
+		  
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href="index.html">Presentation</a></li>
+          <li><a href="project.html">The Project</a></li>
+          <li class="selected"><a href="analysis.html">Analysis</a></li>
+          <li><a href="references.html">Refereces</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+     
+      <div id="content">
+        <!-- insert the page content here -->
+		
+     	<h2>Data Understanding</h2>
+		
+			<p>
+				</br>During the Data Understanding phase, we will execute an initial assessment of the provided data, 
+				analysing each of the attributes and how they will contribute to get a more accurate result on the analysis. 
+				</br></br>To consult what have been done during the execution of the data understanding, go to the following
+				<a href="..\Presentation\Notebooks\Data Understanding\understanding.html">link</a></br>
+			</p>
+		
+		
+		<h2>Data Preparation</h2>
+			<p></br>During this stage we will focus on the variable cleaning, where we will cover the following steps: 
+				<ul>
+					<li><b>Removal of Irrelevant data.-</b> Removal of those variables and registers that are redundant or Empty and will not add value to our model.
+					<li><b>Fix Missing Values.-</b> Identify those attributes with no value and decide if the column should be deleted, filled with 
+					a constant, mean of all values, or use some other method such as Median imputation, Imputation with distributions or Random Imputations. 
+					<li><b>Consistency in data format.-</b> Verify if the format of the data is the same in all registers. 					
+					<li><b>Merging the data.-</b> As we use two different datasets, we have to merge both of them, this is done in order to obtain a single dataset of the form <i>[m x n] </i>					
+				</ul> 
+					To consult what have been done during the exection of the data preparation, go to the following 
+					<a href="..\Presentation\Notebooks\Data Preparation\preparation.html">link</a></br>
+					</br><b>Data Collection Report (Deliverable):</b> The data collection report contains the description of the data, a record of the data exploration and the 
+					final data quality report, describing everything that was done to the data during the Data Understanding and Data Preparation phases, this in 
+					compliance to the specification design.
+						
+			</p>
+			
+		<h2>Modelling</h2>
+        <p></br>This section is separated in two different stages: 
+		<ul>
+			<li><b>Classifier:</b> For the classifier we will use data provided by Inprova from their actual client’s database, and based in that information
+			we will generate a “positive” part of the training/testing dataset. From information provided from marketing/sales of potential clients that have been
+			contacted but had not engaged in a business relationship with Inprova (not buyers) we will generate the negative part of the training dataset. 
+			</br>With that information we will generate a Target Variable which will take Boolean values, 1 for those who are clients, and 0 for those who are not.
+				</br></br>To consult the different classifiers, go to the following:</br>
+				<a href="..\Presentation\Notebooks\Modelling\perceptron.html">Perceptron</a></br>
+				<a href="..\Presentation\Notebooks\Modelling\knn.html">K-Nearest Neighbours</a></br>
+				<a href="..\Presentation\Notebooks\Modelling\logistic.html">Logistic Regression</a></br>
+				<a href="..\Presentation\Notebooks\Modelling\svm.html">SVM</a></br> 
+			<li><b>Clustering: </b>For the second section of the solution, we will execute a Clustering Analysis based on the resulting dataset of those 
+			registers classified as “Buyers”, which will help us find any hidden structure in the data of our potential clients and based in this we can 
+			separate them in groups that have a certain similarity. </br> The Clustering Analysis is an Unsupervised Learning technique for Machine
+			Learning models, which will help us to discover hidden patterns in the data by organizing the data into meaningful structures</br>
+			</br>To consult the clustering algorithms implemented, go to the following links: </br>
+				<a href="..\Presentation\Notebooks\Clustering\kmeans.html">K-means</a></br>
+				<a href="..\Presentation\Notebooks\Clustering\hmeans.html">Hierarchical Means</a></br>
+		</ul>
+			
+		</p>
+
+		<h2>Analysis and evaluation</h2>
+        <p></br>Just as the Modelling is divided into 2 different stages, we have to evaluate the models accordingly, therefore we have also 2 evaluation stages:
+		<ul><li><b>Classifier's Evaluation:</b>The results obtained from the analysis will allow us to construct a confusion matrix, from which a set of evaluation
+		measures will be calculated. From this evaluation, we will be able to assess how well our model is capable of predicting the likelihood that a client engages
+		in a purchase by calculating the Accuracy, False Alarm, False Dismissal, Precision, Recall and Specificity, we will be able to assess the overall performance 
+		of our predictive model. Based on this measures and taking advantage of the iterative nature of our methodology, we will aim to maximize the overall performance 
+		of our model
+				<a href="..\Presentation\Notebooks\Evaluation\ClassifierEvaluationTable.jpg">Classifier’s Evaluation Table</a></br>
+			<li><b>Cluster's evaluation:</b>The Elbow method, to estimate the optimal number of clusters k for a given task. We have to have present that during the phase
+			of choosing the number of clusters, the higher the number of clusters, the lower the cost. Therefore we used a Penalty for complexity value (Simplified BIC Penalty)
+					</br>
+			</br>After deciding on the number of clusters, it is important to assess the concentration of the clusters, to and we do that using the within-cluster SSE (distortion)
+			to compare the performance of different  clusters. to select the centroids, we can choose random ones, or use a distance-based centroid method, but the best 
+			option is to go for what is called K-means++ which combines the random and the distance-based centroid methods. 
+					</br>
+			<li><b>Model Assessment: </b>The model assessment will include a report describing the Model, Modelling techniques and assumptions made during the development of the model, 
+			also will include a Test Design of the model and parameter settings.
+					</br>
+		</ul></p>
+		
+		<h2>Results evaluation: </h2>
+        <p><ul>
+			<li><b>Dataset:</b> The final Dataset must contain information prepared according to the model to which it will apply, and should include Derived attributes, 
+			Generated records, Merge and Reformatted Data </br>
+			<li><b>Source Code:</b> The Source code will include comments to make it easy to understand. </br>
+			<li><b>Results evaluation: </b> The Results Evaluation document should include an assessment on the data mining results and a Review of the Process. 
+			Also should include a recommendation of next steps or a list of possible actions.</br>
+			</ul></p>
+      
+      </div>
+	   <img src="..\Presentation\img\topology.jpg" alt="Topology" style="width:780px;height:228px;" align="middle">
+    </div>
+    <div id="footer">
+      Created by: Victor Ortiz-Santiago</br>
+	  University of Liverpool
+    </div>
+  </div>
+</body>
+</html>
